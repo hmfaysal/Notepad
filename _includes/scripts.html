@@ -1,0 +1,26 @@
+    <script src="{{ site.url }}/assets/js/public/jqueryb146.js?v=77a7756db2"></script>
+
+    
+    <script src="{{ site.url }}/assets/js/vendor/fastclickb146.js?v=77a7756db2"></script>
+    <script src="{{ site.url }}/assets/js/vendor/foundation.minb146.js?v=77a7756db2"></script>
+    <script src="{{ site.url }}/assets/js/vendor/background-checkb146.js?v=77a7756db2"></script>
+    <script src="{{ site.url }}/assets/js/vendor/post-header-animationsb146.js?v=77a7756db2"></script>
+    <script src="{{ site.url }}/assets/js/summerb146.js?v=77a7756db2"></script>
+
+{% if site.google_analytics %}
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl = 
+ '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', '{{ site.google_analytics }}']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+{% endif %}
