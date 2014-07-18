@@ -8,8 +8,8 @@ Main Features:
 * Fast and light
 * Font Awesome
 * Disqus comments integration
-Y
-ou can set post image covers by using only Kramdown narkdown, just place something like this: `![cover-image](http://path-to-your-image.jpg)`
+
+You can set post image covers by using only Kramdown narkdown, just place something like this: `![cover-image](http://path-to-your-image.jpg)`
 
 Credits:
 
