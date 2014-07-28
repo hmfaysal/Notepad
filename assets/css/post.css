@@ -216,9 +216,11 @@ html, body, .summer-post-container, .summer-post-header {
               font-size: 1.625rem; } }
         .post-template .summer-post-content > div:not(.summer-post-title) p.with-image {
           text-align: center;
-          padding-top: 3.125rem;
-          padding-bottom: 3.125rem;
+          padding-top: 1.125rem;
+          padding-bottom: 1.125rem;
           max-width: 75rem; }
+  .post-template .summer-post-content.tag-simple > div:not(.summer-post-title) {
+    margin: 0 auto 0; }
   @media screen and (max-width: 47em) {
     .post-template .summer-post-title, .post-template .summer-post-content {
       font-size: 70%; } }
@@ -255,7 +257,10 @@ html, body, .summer-post-container, .summer-post-header {
   .post-template .intro-effect-sliced.modify:not(.notrans) .summer-post-content > div {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
-    transition-duration: 0.5s; }
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-delay: 0.4s;
+    transition-delay: 0.4s; }
   .post-template .intro-effect-sliced .bg-img:first-child {
     bottom: 50%; }
   .post-template .intro-effect-sliced .bg-img:last-child {
@@ -292,8 +297,8 @@ html, body, .summer-post-container, .summer-post-header {
     transform: translateY(0);
     opacity: 1; }
   .post-template .intro-effect-sliced.modify:not(.notrans) .summer-post-title {
-    -webkit-transition-delay: 0.15s;
-    transition-delay: 0.15s; }
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s; }
 
 .summer-post-share {
   font-size: 1.875rem;
@@ -365,92 +370,141 @@ html, body, .summer-post-container, .summer-post-header {
       .summer-author-info .summer-post-author {
         text-align: left; } }
 
-.summer-page-container {
-  /* Page conent */ }
-  .summer-page-container .summer-page-menu-header {
-    width: 100%;
-    height: 5rem;
-    background-color: black;
-    color: white;
-    position: relative;
-    z-index: 9999; }
-    .summer-page-container .summer-page-menu-header .summer-blog-logo {
-      display: inline-block;
+.summer-page-menu-header,
+.summer-post-menu-header-simple {
+  width: 100%;
+  height: 5rem;
+  background-color: black;
+  color: white;
+  position: relative;
+  z-index: 9999; }
+  .summer-page-menu-header .summer-blog-logo,
+  .summer-post-menu-header-simple .summer-blog-logo {
+    display: inline-block;
+    max-height: 5rem; }
+    .summer-page-menu-header .summer-blog-logo img,
+    .summer-post-menu-header-simple .summer-blog-logo img {
       max-height: 5rem; }
-      .summer-page-container .summer-page-menu-header .summer-blog-logo img {
-        max-height: 5rem; }
-  .summer-page-container .summer-page-title {
-    margin: 0 auto;
-    width: 100%; }
-    .summer-page-container .summer-page-title a {
-      color: black; }
-      .summer-page-container .summer-page-title a:hover {
-        color: #e51843; }
-    .summer-page-container .summer-page-title h1 {
-      color: black;
-      font-weight: 800;
-      font-size: 3.125rem;
-      padding: 0;
-      padding-top: 4.375rem;
-      padding-bottom: 4.375rem;
-      margin: 0 auto;
-      line-height: 1.1;
-      text-align: center;
-      text-transform: uppercase; }
-      @media only screen and (min-width: 40.063em) {
-        .summer-page-container .summer-page-title h1 {
-          font-size: 4.375rem;
-          padding-top: 5.625rem;
-          padding-bottom: 5.625rem; } }
-      @media only screen and (min-width: 70em) {
-        .summer-page-container .summer-page-title h1 {
-          padding-top: 6.875rem;
-          padding-bottom: 6.875rem; } }
-      @media only screen and (min-width: 90em) {
-        .summer-page-container .summer-page-title h1 {
-          font-size: 5.3125rem;
-          padding-top: 8.125rem;
-          padding-bottom: 8.125rem; } }
-  .summer-page-container .summer-page-content {
-    margin: 0 auto;
-    padding: 0 0 5rem; }
-    .summer-page-container .summer-page-content > div:not(.summer-page-title) {
-      margin: 0 auto;
-      padding-left: 1.875rem;
-      padding-right: 1.875rem; }
-      .summer-page-container .summer-page-content > div:not(.summer-page-title) a, .summer-page-container .summer-page-content > div:not(.summer-page-title) code {
-        color: #e51843; }
-      .summer-page-container .summer-page-content > div:not(.summer-page-title) ul, .summer-page-container .summer-page-content > div:not(.summer-page-title) ol {
-        padding-left: 1.25rem;
-        font-size: 1.125rem; }
-      .summer-page-container .summer-page-content > div:not(.summer-page-title) h1, .summer-page-container .summer-page-content > div:not(.summer-page-title) h2, .summer-page-container .summer-page-content > div:not(.summer-page-title) h3, .summer-page-container .summer-page-content > div:not(.summer-page-title) h4, .summer-page-container .summer-page-content > div:not(.summer-page-title) h5, .summer-page-container .summer-page-content > div:not(.summer-page-title) h6 {
-        font-weight: bold; }
-      .summer-page-container .summer-page-content > div:not(.summer-page-title) h1, .summer-page-container .summer-page-content > div:not(.summer-page-title) h2, .summer-page-container .summer-page-content > div:not(.summer-page-title) h3, .summer-page-container .summer-page-content > div:not(.summer-page-title) h4, .summer-page-container .summer-page-content > div:not(.summer-page-title) h5, .summer-page-container .summer-page-content > div:not(.summer-page-title) h6, .summer-page-container .summer-page-content > div:not(.summer-page-title) ul, .summer-page-container .summer-page-content > div:not(.summer-page-title) ol, .summer-page-container .summer-page-content > div:not(.summer-page-title) blockquote, .summer-page-container .summer-page-content > div:not(.summer-page-title) pre, .summer-page-container .summer-page-content > div:not(.summer-page-title) hr {
-        max-width: 56.25rem;
-        margin-left: auto;
-        margin-right: auto; }
-      .summer-page-container .summer-page-content > div:not(.summer-page-title) p {
-        margin: 0 auto 2em auto;
-        max-width: 56.25rem;
-        font-size: 1.125rem; }
-        .summer-page-container .summer-page-content > div:not(.summer-page-title) p:first-child {
-          font-size: 1.375rem;
-          font-weight: 300; }
-          @media only screen and (min-width: 40.063em) {
-            .summer-page-container .summer-page-content > div:not(.summer-page-title) p:first-child {
-              font-size: 1.625rem; } }
-        .summer-page-container .summer-page-content > div:not(.summer-page-title) p.with-image {
-          text-align: center;
-          padding-top: 3.125rem;
-          padding-bottom: 3.125rem;
-          max-width: 75rem; }
-  @media screen and (max-width: 47em) {
-    .summer-page-container .summer-page-title, .summer-page-container .summer-page-content {
-      font-size: 70%; } }
-  @media screen and (max-width: 27em) {
-    .summer-page-container .summer-page-title, .summer-page-container .summer-page-content {
-      font-size: 50%; } }
 
+.summer-page-title,
+.summer-post-title-simple {
+  margin: 0 auto;
+  width: 100%; }
+  .summer-page-title a,
+  .summer-post-title-simple a {
+    color: black; }
+    .summer-page-title a:hover,
+    .summer-post-title-simple a:hover {
+      color: #e51843; }
+  .summer-page-title h1,
+  .summer-post-title-simple h1 {
+    color: black;
+    font-weight: 800;
+    font-size: 3.125rem;
+    padding: 0;
+    padding-top: 5rem;
+    padding-bottom: 4.375rem;
+    margin: 0 auto;
+    line-height: 1.1;
+    text-align: center;
+    text-transform: uppercase; }
+    @media only screen and (min-width: 40.063em) {
+      .summer-page-title h1,
+      .summer-post-title-simple h1 {
+        font-size: 4.375rem;
+        padding-top: 5.625rem;
+        padding-bottom: 5.625rem; } }
+    @media only screen and (min-width: 70em) {
+      .summer-page-title h1,
+      .summer-post-title-simple h1 {
+        padding-top: 6.875rem;
+        padding-bottom: 6.875rem; } }
+    @media only screen and (min-width: 90em) {
+      .summer-page-title h1,
+      .summer-post-title-simple h1 {
+        font-size: 5.3125rem;
+        padding-top: 8.125rem;
+        padding-bottom: 8.125rem; } }
+  .summer-page-title .summer-post-meta-simple,
+  .summer-post-title-simple .summer-post-meta-simple {
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 2.5rem; }
+    .summer-page-title .summer-post-meta-simple h1,
+    .summer-post-title-simple .summer-post-meta-simple h1 {
+      padding: 0; }
+    .summer-page-title .summer-post-meta-simple p.meta,
+    .summer-post-title-simple .summer-post-meta-simple p.meta {
+      padding-top: 0.625rem; }
+    @media only screen and (min-width: 40.063em) {
+      .summer-page-title .summer-post-meta-simple,
+      .summer-post-title-simple .summer-post-meta-simple {
+        padding-top: 6.25rem;
+        padding-bottom: 3.75rem; } }
+    @media only screen and (min-width: 70em) {
+      .summer-page-title .summer-post-meta-simple,
+      .summer-post-title-simple .summer-post-meta-simple {
+        padding-top: 8.75rem;
+        padding-bottom: 5.625rem; } }
+    @media only screen and (min-width: 90em) {
+      .summer-page-title .summer-post-meta-simple,
+      .summer-post-title-simple .summer-post-meta-simple {
+        padding-top: 10rem;
+        padding-bottom: 6.25rem; } }
+
+/* Page conent */
+.summer-page-content {
+  margin: 0 auto;
+  padding: 0 0 5rem; }
+  .summer-page-content > div:not(.summer-page-title) {
+    margin: 0 auto;
+    padding-left: 1.875rem;
+    padding-right: 1.875rem; }
+    .summer-page-content > div:not(.summer-page-title) a, .summer-page-content > div:not(.summer-page-title) code {
+      color: #e51843; }
+    .summer-page-content > div:not(.summer-page-title) ul, .summer-page-content > div:not(.summer-page-title) ol {
+      padding-left: 1.25rem;
+      font-size: 1.125rem; }
+    .summer-page-content > div:not(.summer-page-title) h1, .summer-page-content > div:not(.summer-page-title) h2, .summer-page-content > div:not(.summer-page-title) h3, .summer-page-content > div:not(.summer-page-title) h4, .summer-page-content > div:not(.summer-page-title) h5, .summer-page-content > div:not(.summer-page-title) h6 {
+      font-weight: bold; }
+    .summer-page-content > div:not(.summer-page-title) h1, .summer-page-content > div:not(.summer-page-title) h2, .summer-page-content > div:not(.summer-page-title) h3, .summer-page-content > div:not(.summer-page-title) h4, .summer-page-content > div:not(.summer-page-title) h5, .summer-page-content > div:not(.summer-page-title) h6, .summer-page-content > div:not(.summer-page-title) ul, .summer-page-content > div:not(.summer-page-title) ol, .summer-page-content > div:not(.summer-page-title) blockquote, .summer-page-content > div:not(.summer-page-title) pre, .summer-page-content > div:not(.summer-page-title) hr {
+      max-width: 56.25rem;
+      margin-left: auto;
+      margin-right: auto; }
+    .summer-page-content > div:not(.summer-page-title) p {
+      margin: 0 auto 2em auto;
+      max-width: 56.25rem;
+      font-size: 1.125rem; }
+      .summer-page-content > div:not(.summer-page-title) p:first-child {
+        font-size: 1.375rem;
+        font-weight: 300; }
+        @media only screen and (min-width: 40.063em) {
+          .summer-page-content > div:not(.summer-page-title) p:first-child {
+            font-size: 1.625rem; } }
+      .summer-page-content > div:not(.summer-page-title) p.with-image {
+        text-align: center;
+        padding-top: 1.125rem;
+        padding-bottom: 1.125rem;
+        max-width: 75rem; }
+
+@media screen and (max-width: 47em) {
+  .summer-page-title, .summer-page-content {
+    font-size: 70%; } }
+@media screen and (max-width: 27em) {
+  .summer-page-title, .summer-page-content {
+    font-size: 50%; } }
+.post-template .summer-post-title-simple.row,
+.post-template .summer-disqus.row,
+.post-template .social-icons.row,
+.page-template .summer-post-title-simple.row,
+.page-template .summer-disqus.row,
+.page-template .social-icons.row {
+  margin-left: auto;
+  margin-right: auto; }
+.post-template .summer-author-info .row,
+.page-template .summer-author-info .row {
+  margin-left: auto;
+  margin-right: auto; }
 .post-template .row,
 .page-template .row {
   max-width: 58.125rem;

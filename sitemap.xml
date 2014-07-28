@@ -3,11 +3,16 @@ layout: nil
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    {% for link in site.links %}{% if link.external %}{% else %} 
     <url>
-        <loc>{{ site.url }}{{ link.url }}</loc>
-    </url>{% endif %}{% endfor %}
+        <loc>{{ site.url }}</loc>
+    </url>
     
+    {% for page in site.pages %}
+    <url>
+        <loc>{{ site.url }}{{ page.url }}</loc>
+    </url>
+    {% endfor %}
+
     {% for post in site.posts %}
     <url>
         <loc>{{ site.url }}{{ post.url }}</loc>

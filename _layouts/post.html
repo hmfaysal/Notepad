@@ -19,21 +19,21 @@ Description: Awesome dude, awesome life
 {% include head.html %}
 </head>
 <body class="post-template" itemscope itemtype="http://schema.org/WebPage">  
-
-<main id="summer-post-container" class="summer-post-container intro-effect-sliced" role="main">
-    
-    
-        <header class="summer-post-header">
-            <div class="bg-img"></div>
-            
-            <div class="summer-post-menu-header">
+{% if page.imagefeature %}
+        <main id="summer-post-container" class="summer-post-container intro-effect-sliced" role="main">
+            <header class="summer-post-header">
+                <div class="bg-img"></div>
                 
+                <div class="summer-post-menu-header">
+{% else %}
+        <main id="summer-post-container-simple" class="summer-post-container-simple" role="main">
+            <header class="summer-post-header-simple">
+                <div class="summer-post-menu-header-simple">
+{% endif %}
                     <a class="summer-blog-logo" href="{{ site.url }}">
                         <img src="{{ site.url }}/images/{{ site.logo }}" alt="Blog Logo" />
                     </a>
-                
-                
-                
+
                 <div class="summer-blog-menu">      
     <div class="summer-mobile-menu show-for-small">
         <a href="#"><i class="fa fa-bars"></i></a>
@@ -54,6 +54,7 @@ Description: Awesome dude, awesome life
 
 </div>
             </div>
+{% if page.imagefeature %}
             <div class="summer-post-title bg-check">
                 <h1>{{ page.title }}</h1>
                 <p>by <strong>{{ site.owner.name }}</strong> &#8212; {% assign tagsize = page.tags.size %}{% if tagsize != 0 %}on {% for tag in page.tags %}<a href="{{ site.url }}/tags/index.html#{{ tag | cgi_encode }}" data-toggle="tooltip" title="Posts tagged with {{ tag }}" rel="tag">{{ tag }}</a>{% unless forloop.last %}&nbsp;&comma;&nbsp;{% endunless %}{% endfor %}{% endif %} <strong><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d %b %Y" }}</time></strong></p>
@@ -61,8 +62,19 @@ Description: Awesome dude, awesome life
             <div class="bg-img"></div>
         </header>
         <button class="trigger bg-check" data-info="Read more"><span>Trigger</span></button>
-        {% if page.imagefeature %}<img src="{{ site.url }}/images/{{ page.imagefeature }}" alt="cover-image" />{% endif %}
-        <article class="summer-post-content post">
+        <img src="{{ site.url }}/images/{{ page.imagefeature }}" alt="cover-image" />
+{% else %}
+                <div class="summer-post-title-simple row">
+                    <div class="small-12 columns">
+                        <div class="summer-post-meta-simple">
+                            <h1>{{ page.title }}</h1>
+                            <p>by <strong>{{ site.owner.name }}</strong> &#8212; {% assign tagsize = page.tags.size %}{% if tagsize != 0 %}on {% for tag in page.tags %}<a href="{{ site.url }}/tags/index.html#{{ tag | cgi_encode }}" data-toggle="tooltip" title="Posts tagged with {{ tag }}" rel="tag">{{ tag }}</a>{% unless forloop.last %}&nbsp;&comma;&nbsp;{% endunless %}{% endfor %}{% endif %} <strong><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d %b %Y" }}</time></strong></p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+{% endif %}
+        {% if page.imagefeature %}<article class="summer-post-content post">{% else %}<article class="summer-post-content post tag-simple">{% endif %}
             <div>{{ content }}
             </div>
         </article>
