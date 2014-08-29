@@ -3,6 +3,7 @@ description:      "Blogging is fun"
 logo:             logo.png
 disqus_shortname: hmfaysal
 share:            true
+dropcap:			true
 # Change url to your domain. Leave localhost server or blank when working locally.
 # or use the hint from http://jekyllrb.com/docs/github-pages/ to keep this the same 
 # whether working locally or remotely. Start Jekyll with: jekyll serve --baseurl ''
