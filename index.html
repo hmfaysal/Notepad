@@ -7,9 +7,9 @@ tags: [Hossain, Mohd, Faysal, electrical, engineering, blog, university, pennsyl
 ---
 {% if site.paginate %}
 	{% for post in paginator.posts %}
-    <article class="summer-index-post post row">
+    <article class="notepad-index-post post row">
         <div class="small-12 medium-3 large-2 columns datetime">
-            <span class="summer-post-meta">
+            <span class="notepad-post-meta">
                 <time datetime="{{ post.date | date_to_xmlschema }}">
                     <span class="day">
                         {{ post.date | date: "%d" }}
@@ -21,18 +21,18 @@ tags: [Hossain, Mohd, Faysal, electrical, engineering, blog, university, pennsyl
             </span>
         </div>
         <div class="small-12 medium-9 large-10 columns">
-            <header class="summer-post-header">
-                <h3 class="summer-post-title">
+            <header class="notepad-post-header">
+                <h3 class="notepad-post-title">
                     <a href="{{ site.url }}{{ post.url }}">
                         {{ post.title }}
                     </a>
                 </h3>
             </header>
-            <section class="summer-post-excerpt">
+            <section class="notepad-post-excerpt">
                 <p>{{ post.content | strip_html | truncatewords:40 }}</p>
             </section>
             
-                <div class="summer-index-post-tags">
+                <div class="notepad-index-post-tags">
                 {% for tag in post.categories %}<a href="{{ site.url }}/categories/index.html#{{ post.categories | cgi_encode }}" title="Other posts from the {{ tag | capitalize }} category">{{ tag | capitalize }}</a>{% unless forloop.last %}&nbsp;{% endunless %}{% endfor %}
                     
                 </div>
@@ -61,9 +61,9 @@ tags: [Hossain, Mohd, Faysal, electrical, engineering, blog, university, pennsyl
 	</nav>
 {% else %}
 	{% for post in site.posts %}
-    <article class="summer-index-post post row">
+    <article class="notepad-index-post post row">
         <div class="small-12 medium-3 large-2 columns datetime">
-            <span class="summer-post-meta">
+            <span class="notepad-post-meta">
                 <time datetime="{{ post.date | date_to_xmlschema }}">
                     <span class="day">
                         {{ post.date | date: "%d" }}
@@ -75,18 +75,18 @@ tags: [Hossain, Mohd, Faysal, electrical, engineering, blog, university, pennsyl
             </span>
         </div>
         <div class="small-12 medium-9 large-10 columns">
-            <header class="summer-post-header">
-                <h3 class="summer-post-title">
+            <header class="notepad-post-header">
+                <h3 class="notepad-post-title">
                     <a href="{{ site.url }}{{ post.url }}">
                         {{ post.title }}
                     </a>
                 </h3>
             </header>
-            <section class="summer-post-excerpt">
+            <section class="notepad-post-excerpt">
                 <p>{{ post.content | strip_html | truncatewords:100 }}</p>
             </section>
             
-                <div class="summer-index-post-tags">
+                <div class="notepad-index-post-tags">
                 {% for tag in post.categories %}<a href="{{ site.url }}/categories/index.html#{{ post.categories | cgi_encode }}" title="Other posts from the {{ tag | capitalize }} category">{{ tag | capitalize }}</a>{% unless forloop.last %}&nbsp;{% endunless %}{% endfor %}
                     
                 </div>

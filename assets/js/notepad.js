@@ -1,14 +1,14 @@
 'use strict';
 
-var summer = (function ($) {
+var notepad = (function ($) {
 
-    var indexPostClass = '.summer-index-post',
-        mobileMenuButton = '.summer-mobile-menu a',
-        mobileMenuCloseButton = '.summer-mobile-close-btn',
-        mainMenu = '.summer-menu',
+    var indexPostClass = '.notepad-index-post',
+        mobileMenuButton = '.notepad-mobile-menu a',
+        mobileMenuCloseButton = '.notepad-mobile-close-btn',
+        mainMenu = '.notepad-menu',
         bgCheckClass = '.bg-check',
         postBgImages = '.bg-img img',
-        postCoverImg = '.summer-post-header .bg-img',
+        postCoverImg = '.notepad-post-header .bg-img',
 
     // post animations on homepage
     indexPostAnimate = function () {
@@ -54,7 +54,7 @@ var summer = (function ($) {
         }
     },
 
-    // summer javascripts initialization
+    // notepad javascripts initialization
     init = function () {
         indexPostAnimate();
         $(window).on('scroll', function() {
@@ -73,5 +73,5 @@ var summer = (function ($) {
 })(jQuery);
 
 (function () {
-    summer.init();
+    notepad.init();
 })();
